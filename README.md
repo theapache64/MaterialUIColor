@@ -516,3 +516,24 @@ static func black() -> UIColor {return ColorUtils.UIColorFromRGB(rgbValue: 0x000
 
 static func white() -> UIColor {return ColorUtils.UIColorFromRGB(rgbValue: 0xFFFFFF)}
 ```
+
+### ColorUtils.swift
+
+```swift
+
+import Foundation
+import UIKit
+
+class ColorUtils {
+    
+    public static func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
+}
+```
