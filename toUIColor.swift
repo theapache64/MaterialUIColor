@@ -34,7 +34,7 @@ do {
     for i in colors.split(separator : "\n"){
     	//static func red500() -> UIColor {return ColorUtils.UIColorFromRGB(rgbValue: 0x9C27B0)}
     	let colorNameAndColor = capturedGroups(on : String(i), withRegex : pattern)
-    	print("static func \(colorNameAndColor[0])() -> UIColor {return ColorUtils.UIColorFromRGB(rgbValue: 0x\(colorNameAndColor[1]))}\n")
+    	print("static func \(colorNameAndColor[0])() -> UIColor {return ColorUtils.UIColorFromRGB(rgbValue: 0x\(colorNameAndColor[1]))}")
     }
 }catch{
     print("Error \(error)")
